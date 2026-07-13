@@ -1,0 +1,533 @@
+{
+  "info": {
+    "_postman_id": "1bd557de-01db-4764-a6b4-b86167bcba19",
+    "name": "gup-sup",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52406381",
+    "_collection_link": "https://go.postman.co/collection/52406381-1bd557de-01db-4764-a6b4-b86167bcba19?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "send-otp",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"krashanyadav5@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/send-otp",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "send-otp"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"krashanyadav5@gmail.com\",\r\n    \"otp\":\"307976\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/register",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"krashanyadav5@gmail.com\",\r\n    \"password\": \"krashan@123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/login",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logOut",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"krashanyadav5@gmail.com\",\r\n    \"password\": \"krashan@123\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/api/auth/logout",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "get-user",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"krashanyadav5@gmail.com\",\r\n    \"password\": \"krashan@123\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/api/user/me",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "user",
+                "me"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update-profile",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "value": "",
+                  "type": "text",
+                  "uuid": "0e566101-51b0-414f-84ae-8d5e1b195985"
+                },
+                {
+                  "key": "about",
+                  "value": "backend-developer",
+                  "type": "text",
+                  "uuid": "035c4731-1909-4c29-a54e-878f6d02444e"
+                },
+                {
+                  "key": "avatar",
+                  "type": "file",
+                  "uuid": "856643c8-7cb5-47e7-8b2a-645857ec323f",
+                  "src": "/C:/Users/Krashan Yadav/OneDrive/Pictures/Screenshots/Screenshot 2024-10-10 003143.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:3000/api/user/update",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "user",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-all",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"krashanyadav5@gmail.com\",\r\n    \"password\": \"krashan@123\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/api/user/6a539c73d588b790319f1dd4",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "user",
+                "6a539c73d588b790319f1dd4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getby :id",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "contacts",
+      "item": [
+        {
+          "name": "add-contact",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"rajsinghji3450@gmail.com\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/contacts/add",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "contacts",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-mycontact",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"rajsinghji3450@gmail.com\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/api/contacts/get-myCont",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "contacts",
+                "get-myCont"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "remove-contact",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"rajsinghji3450@gmail.com\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/api/contacts/remove/6a54d6983dd8047344d1afe2",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "contacts",
+                "remove",
+                "6a54d6983dd8047344d1afe2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "message",
+      "item": [
+        {
+          "name": "send-msg",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "receiverId",
+                  "value": "6a539ce5d588b790319f1dd8",
+                  "type": "text",
+                  "uuid": "f93febf5-81c9-4e77-8a52-69412c4727d7"
+                },
+                {
+                  "key": "text",
+                  "value": "hey brother",
+                  "type": "text",
+                  "uuid": "0e2e2dd9-c809-4a87-b852-3c87994dcdd6",
+                  "disabled": true
+                },
+                {
+                  "key": "file",
+                  "type": "file",
+                  "uuid": "5fec9042-98dc-46d0-89b7-8242ffd83b89",
+                  "src": "/C:/Users/Krashan Yadav/OneDrive/Videos/Screen Recordings/Screen Recording 2024-10-05 132635.mp4"
+                }
+              ]
+            },
+            "url": {
+              "raw": "localhost:3000/api/chat/send",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "chat",
+                "send"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get-chats",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "get-msgAll",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/chat/get-allMes/6a539e9dd588b790319f1e1f",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "chat",
+                "get-allMes",
+                "6a539e9dd588b790319f1e1f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "seen-true",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/chat/seen/6a54d7603dd8047344d1b00e",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "chat",
+                "seen",
+                "6a54d7603dd8047344d1b00e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete-msg-single",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"messageId\":\"6a54d7603dd8047344d1b00e\",\r\n    \"deleteType\":\"everyone\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/chat/dlt-message",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "chat",
+                "dlt-message"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "edit-meaasge-single",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"messageId\":\"6a551e5cfd22634c6f6d1fc9\",\r\n    \"text\":\"ram ram mittar\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/chat/message/edit",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "chat",
+                "message",
+                "edit"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "emoji",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"messageId\":\"6a551e5cfd22634c6f6d1fc9\",\r\n    \"emoji\":\"❤️\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/chat/message/react",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "chat",
+                "message",
+                "react"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "msg-delivered",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/chat/message/6a551e5cfd22634c6f6d1fc9/delivered",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "chat",
+                "message",
+                "6a551e5cfd22634c6f6d1fc9",
+                "delivered"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

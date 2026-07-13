@@ -1,0 +1,160 @@
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 340px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-right: 1px solid #e6e6e6;
+  transition: all 0.3s ease;
+}
+
+/* ===== HEADER ===== */
+.sidebar-header {
+  padding: 12px;
+  background-color: #f0f2f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #008069;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ===== SEARCH ===== */
+.search-container input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 20px;
+  border: none;
+  background-color: #ffffff;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.search-container input:focus {
+  box-shadow: 0 0 0 2px rgba(0,128,105,0.15);
+}
+
+/* ===== CONTACT LIST ===== */
+.contacts-list {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+  /* Smooth scrollbar */
+.contacts-list::-webkit-scrollbar {
+  width: 5px;
+}
+.contacts-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}  
+
+/* ===== CONTACT CARD ===== */
+  .contact-card {
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background 0.2s ease, transform 0.1s ease;
+}  
+.contact-card:hover {
+  background-color: #f5f7f7;
+  transform: translateX(2px);
+}
+
+.contact-card.active {
+  background-color: #e9edef;
+}
+
+/* ===== AVATAR ===== */
+.avatar-box {
+  position: relative;
+  margin-right: 12px;
+}
+
+.sidebar-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+/* ===== DETAILS ===== */
+.contact-details {
+  flex: 1;
+  overflow: hidden;
+}
+
+.contact-name {
+  font-weight: 500;
+  font-size: 15px;
+  color: #111b21;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== EMPTY TEXT ===== */
+.sidebar-msg {
+  text-align: center;
+  margin-top: 25px;
+  color: #888;
+  font-size: 14px;
+}
+
+/* ===== CONTACT ROW ===== */
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* ===== REMOVE BUTTON ===== */
+.remove-contact-btn {
+  background: transparent;
+  border: none;
+  color: #999;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 6px;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.contact-card:hover .remove-contact-btn {
+  opacity: 1;
+}
+
+.remove-contact-btn:hover {
+  color: #ff4d4f;
+  transform: scale(1.2);
+}
+ 
+
+ 
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+  }
+
+  .sidebar.mobile-hidden {
+    transform: translateX(-100%);
+    visibility: hidden;
+    
+  }
+}
