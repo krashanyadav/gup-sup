@@ -7,6 +7,39 @@ Gup-Sup is a modern full-stack real-time chat application built using the MERN s
 
 ---
 
+---
+
+## 🚀 Live Deployment
+
+### 🌐 Frontend (Vercel)
+
+**Live Demo:**  
+https://gup-sup-sage.vercel.app/
+
+### ⚙️ Backend API (Render)
+
+**API Base URL:**  
+https://backend-gup-sup.onrender.com
+
+### 🛠 Deployment Platforms
+
+- **Frontend:** Vercel
+- **Backend:** Render
+- **Database:** MongoDB Atlas
+- **Media Storage:** ImageKit
+
+---
+
+## 📡 API Health Check
+
+You can verify the backend service by visiting:
+
+https://backend-gup-sup.onrender.com
+
+> If the backend is active, it will return the configured API response.
+
+---
+
 ##  Features
 
 - Secure User Authentication
