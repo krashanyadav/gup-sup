@@ -17,11 +17,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/uploads", express.static("uploads"));
 // app.use(cors());
 
-app.use(cors({
-  origin
-    : "http://localhost:5173",
-  credentials: true
-}));
+const allowedOrigins = [
+  process.env.CLIENT_URL_LOCAL,
+  process.env.CLIENT_URL_PROD,
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 
