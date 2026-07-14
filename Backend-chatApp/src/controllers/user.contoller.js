@@ -4,7 +4,7 @@ const User = require("../models/user.model");
 // 1️⃣ Get My Profile
 async function getMyProfile(req, res) {
     try {
-    console.log(req.user)
+    // console.log(req.user)
         return res.status(200).json({
             user:req.user
         })
