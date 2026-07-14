@@ -1,4 +1,4 @@
-import "../styles/ChatWindow.css"
+import "../styles/chatWindow.css"
 import { useEffect, useState, useRef } from "react"
 import { getMessages, getChats } from "../services/chatService"
 import MessageInput from "./MessageInput"
