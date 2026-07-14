@@ -1,4 +1,4 @@
-const { uploadMedia } = require("../helper/imgkit");
+const { uploadMediaa ,deleteMedia} = require("../helper/imgkit.js");
 const User = require("../models/user.model");
 
 // 1️⃣ Get My Profile
@@ -30,7 +30,7 @@ async function updateProfile(req, res) {
     // console.log(req.file)
     if (req.file) {
       // Database mein path save karein: /uploads/filename.jpg
-      const image = await uploadMedia(req.file)
+      const image = await uploadMediaa(req.file)
       updateData.avatar = image
      
 
