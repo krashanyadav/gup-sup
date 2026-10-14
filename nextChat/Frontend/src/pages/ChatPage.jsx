@@ -64,9 +64,7 @@ onBack={() => setSelectedUser(null)} // Ye function wapas contact list dikhayega
 />
 
 </div>
-
 )
-
 }
 
 export default ChatPage
